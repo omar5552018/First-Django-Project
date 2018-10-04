@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+<html>
+<head>
+    {% block head %}
+    <title>Login</title>    
+    {% endblock head %}
+</head>
+<body>
+    {% block body %}
+    <div class="container" style="z-index:1; padding-top:65px;">
+        
+        <p><h1>Login</h1><div style="margin-left:6cm;"><a href="/accounts/reset_password">forgot</a></div></p>          
+           <!-- if you don`t add '/' before url its will append to previous url -->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-outline-primary" type="submit" name="button" >Login</button><br><br>
+            <span>Don`t have Account <a href="/accounts/register/"> Create one</a></span>        
+        </form>        
+    </div>
+    {% endblock body %}
+</body>
+</html>

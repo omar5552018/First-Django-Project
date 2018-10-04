@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<html>
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>Register</title>
+{% endblock head %}
+</head>
+<body>
+{% block body %}
+    <div class="container" style="z-index:1; padding-top:65px;">
+        <h1>Register</h1><br>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-outline-primary" type="submit" name="button">Register</button>
+        </form>
+    </div>
+{% endblock body %}
+</body>
+</html>

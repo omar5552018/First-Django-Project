@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+<html>
+<head>
+{% block head %}
+    <meta charset="utf-8" />   
+    <title>Profile</title>   
+{% endblock head %}
+</head>
+<body>
+{% block body %}
+    <div class="container" style="z-index:1; padding-top:65px;">
+        <h1>{{ user.username }}`s Profile</h1><br>
+            <p><b>Username:</b> {{ user }}</p>
+            <p><b>First name:</b> {{ user.first_name }}</p>
+            <p><b>Last name:</b> {{ user.last_name }}</p>
+            <p><b>Job:</b> {{ user.userprofile.description }}</p>
+            <p><b>City:</b> {{ user.userprofile.city }}</p>
+            <p><b>Website:</b> <a href="{{ user.userprofile.website }}">{{ user.userprofile.website }}</a></p>
+            {% if user.userprofile.image %}
+            <img src="{{ user.userprofile.image.url }}" width="220px" style="	border-radius: 5px;">
+            {% endif %}            
+    </div>
+{% endblock body %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<html>
+<head>
+    {% block head %}
+    <title>Home</title>
+    {% endblock head %}    
+</head>
+<body>
+    {% block body %}
+    <div class="container" style="z-index:1; padding-top:65px;">       
+    <h1>Welcom</h1><p>{{ user }}</p>
+    <hr></div>
+    {% endblock body %}
+</body>
+</html>

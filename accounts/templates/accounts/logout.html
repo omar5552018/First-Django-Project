@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+<html>
+<head>
+    {% block head %}
+    <title>Logout</title>    
+    {% endblock head %}
+</head>
+<body>
+    {% block body %}
+    <div class="container" style="z-index:1; padding-top:65px;">
+        <h1>Logged out</h1><br>
+         <p> <b>Logout Succeusfully</b> if you want login again <a href="/accounts/login/">Login</a></p>
+    </div>
+    {% endblock body %}
+</body>
+</html>
